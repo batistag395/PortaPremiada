@@ -1,15 +1,14 @@
 import Porta from "../components/Porta"
 import PortaModel from "../model/porta"
+import { useState } from "react"
 
 export default function Home() {
 
-  const p1 = new PortaModel(1)
+  const [p1, setP1] = useState(new PortaModel(1, false, true))
 
   return (
     <div style={{display: "flex"}}>
-      <Porta selecionada />
-      <Porta porta={p1}/>
-      <Porta />
+      <Porta value={p1}/>
     </div>
   )
 }

@@ -2,14 +2,14 @@ import styles from "../styles/Porta.module.css"
 import PortaModel from "../model/porta"
 
 interface PortaProps{
-    porta: PortaModel
+    value: PortaModel
 }
 
 export default function Porta(props: PortaProps){
 
-    const {porta} = props
+    const porta = props.value
 
-    const selecionada = porta.selecionada ? styles.selecionada : ''
+    const selecionada = porta?.selecionada ? styles.selecionada : ''
     
     return (
         <div className={styles.area}>
