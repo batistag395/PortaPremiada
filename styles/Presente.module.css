@@ -1,8 +1,10 @@
 .presente {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .tampa {
     width: 100px;
     height: 25px;
